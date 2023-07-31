@@ -1,0 +1,503 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mdc-data-table__table {
+  max-width: 1000px !important;
+  min-width: 500px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .mdc-data-table__table {
+    max-width: 800px !important;
+  }
+}
+
+.table-responsive {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .mdc-data-table__table {
+    max-width: 600px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .table-responsive {
+    justify-content: unset;
+  }
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+.table > :not(caption) > * > * {
+  border-bottom: 0 !important;
+}
+.heart-outline {
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+
+.heart-filled {
+  background-color: red;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+}
+
+.heart-img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.heart-img:hover {
+  cursor: pointer;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  background-color: gray;
+}
+
+.padding0 {
+  padding: 0;
+}
+
+.search-form {
+  /* width: 500px; */
+  padding: 20px;
+  background-color: rgba(143, 143, 143, 0.372) !important;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.detail-page {
+  padding: 0px;
+  background-color: rgba(143, 143, 143, 0.339);
+  box-shadow: 0 0 5px #ccc;
+  backdrop-filter: blur(8px);
+}
+
+select::-ms-expand {
+  color: #000;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath stroke='%23000' stroke-width='0.8' fill='none' d='M0 1L2 3.5L4 1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 8px 10px;
+  border: 1px solid #ced4da;
+  padding-right: 2.5rem;
+  color: #495057;
+}
+
+.events-table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 15px;
+  padding: 20px 40px 30px 40px;
+  height: auto;
+}
+
+.seatmap {
+  width: 500px;
+  min-height: 200px;
+}
+
+.event-detail-headers {
+  font-size: large;
+  color: rgb(116, 255, 221);
+  margin: 0px;
+}
+
+.album-header {
+  resize: both;
+  overflow: auto;
+  color: rgb(116, 255, 221);
+  margin: 0px;
+}
+
+.form-headers {
+  font-size: medium;
+  color: rgb(130, 184, 209);
+  margin: 0px;
+}
+
+.event-detail-values {
+  font-size: small;
+  color: white;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+
+.event-details-heading {
+  color: white;
+  font-size: x-large;
+}
+
+.event-details-card__ticket-status--onsale {
+  background-color: green;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.event-details-card__ticket-status--offsale {
+  background-color: red;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.event-details-card__ticket-status--cancelled {
+  background-color: black;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.event-details-card__ticket-status--postponed {
+  background-color: orange;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.event-detail-anchor {
+  color: rgb(75, 156, 194);
+  display: inline-block;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.arrow {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  transform: translateY(5px);
+  opacity: 1;
+  /* Change the opacity on hover */
+}
+
+.arrow-label-div {
+  color: white;
+  margin-bottom: 0px;
+  height: 35px;
+}
+
+.venue-column-flex {
+  display: flex;
+  flex-direction: column;
+  width: 847px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.venue-details-heading {
+  display: flex;
+  padding-bottom: 4px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  text-align: center;
+  width: max-content;
+}
+
+.venue-details-heading-container {
+  display: flex;
+  justify-content: center;
+}
+
+.venue-row-flex {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.venue-address-div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+.address-row-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.address-label {
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+.venue-address-values-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-google-link {
+  display: flex;
+  color: rgb(90, 156, 183);
+  text-decoration: none;
+}
+
+.address-google-link:hover {
+  color: rgb(125, 114, 197);
+  cursor: pointer;
+}
+
+.venue-more-events-link {
+  display: inline-block;
+  margin-top: 2px;
+  color: rgb(90, 156, 183);
+  text-decoration: none;
+}
+
+.venue-more-events-link:hover {
+  color: rgb(125, 114, 197);
+  cursor: pointer;
+}
+
+.venue-more-events {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.venue-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: rgb(249, 249, 249);
+  margin-top: 50px;
+}
+
+.address-line1,
+.city-state-code,
+.postal-code {
+  display: flex;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+
+.address-google-link-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.venue-image {
+  width: 100px;
+}
+
+.venue-image-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* .event-details-name-cell-text {} */
+
+.event-details-name-cell-text:hover {
+  color: rgb(117, 88, 232);
+  cursor: pointer;
+}
+
+.error-paragraph {
+  display: none;
+  background-color: white;
+  color: red;
+  width: 80%;
+  text-align: center;
+}
+
+/* .table_headers {
+    box-shadow: 3px 5px 10px grey;
+  } */
+
+.even_row {
+  background-color: black;
+}
+
+.odd_row {
+  background-color: gray;
+}
+
+/* New Additions from here */
+
+.seatmap {
+  width: 300px;
+  min-height: 200px;
+}
+
+.inline-a {
+  display: inline-block;
+}
+
+.pipe {
+  color: rgb(62, 117, 219);
+}
+
+/* .ng-star-inserted {
+  display: inline-block;
+} */
+
+.ticket-status-text {
+  border-radius: 7px;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.left-arrow {
+  font-size: large;
+  font-weight: 20;
+}
+
+.mat-mdc-table {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.mdc-data-table__header-row {
+  font-weight: bold;
+  height: 26px !important;
+}
+
+.mat-mdc-tab-labels {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: rgb(71, 153, 137) !important;
+  color: white;
+  font-weight: 700;
+  padding-bottom: 0px;
+}
+.mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+  color: white !important;
+}
+.mat-mdc-tab .mdc-tab__text-label,
+.mat-mdc-tab-link .mdc-tab__text-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mat-row:nth-child(even) {
+  background-color: black !important;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: grey !important;
+}
+
+.venue-container {
+  line-height: 16px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.show {
+  overflow: visible;
+  height: auto;
+}
+
+.album-images {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.artist-container {
+  padding: 20px 100px;
+}
+
+.card-header {
+  padding-left: 5px;
+}
+
+.btn {
+  padding-left: 5px;
+}
+
+.show-text {
+  color: rgb(125, 192, 220);
+  text-decoration: underline;
+}
+
+.show-text:hover {
+  color: rgb(125, 192, 220);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.show-arrow:hover {
+  cursor: pointer;
+}
+
+.mat-mdc-form-field {
+  --mat-mdc-form-field-floating-label-scale: 0.75;
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+  padding-left: 0px;
+  border-radius: 10%;
+}

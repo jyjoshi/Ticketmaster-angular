@@ -1,0 +1,111 @@
+<p>&nbsp;</p>
+
+<div
+  *ngIf="favoriteEvents.length == 0 || !favoriteEvents"
+  class="d-flex justify-content-center m-3"
+>
+  <p class="text-danger w-50 bg-white text-center rounded fw-bold d-block">
+    No favorite events to show
+  </p>
+</div>
+<!-- <div class="d-flex flex-column align-items-center"></div> -->
+<div
+  *ngIf="favoriteEvents.length > 0"
+  class="d-flex justify-content-center m-3"
+>
+  <p class="w-50 text-center rounded fw-bold d-block event-detail-headers">
+    List of your favorite events
+  </p>
+</div>
+<div class="d-flex justify-content-center table-responsive">
+  <table
+    *ngIf="favoriteEvents.length > 0"
+    class="table table-white mat-table"
+    style="width: 60%"
+    mat-table
+    [dataSource]="favoriteEvents"
+  >
+    <ng-container matColumnDef="#">
+      <th class="text-center text-dark" mat-header-cell *matHeaderCellDef>#</th>
+      <td
+        class="text-center text-dark"
+        mat-cell
+        *matCellDef="let element; let i = index"
+      >
+        {{ i + 1 }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="date">
+      <th
+        class="text-center text-dark fw-bold"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        Date
+      </th>
+      <td class="text-center text-dark" mat-cell *matCellDef="let element">
+        {{ element.date }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="event">
+      <th
+        class="text-center text-dark fw-bold"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        Event
+      </th>
+      <td class="text-center text-dark" mat-cell *matCellDef="let element">
+        {{ element.name }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <th
+        class="text-center text-dark fw-bold"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        Category
+      </th>
+      <td class="text-center text-dark" mat-cell *matCellDef="let element">
+        {{ element.genresPipe }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="venue">
+      <th
+        class="text-center text-dark fw-bold"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        Venue
+      </th>
+      <td class="text-center text-dark" mat-cell *matCellDef="let element">
+        {{ element.venue }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="favorite">
+      <th
+        class="text-center text-dark fw-bold"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        Favorite
+      </th>
+
+      <td
+        class="text-center text-dark trash-cell"
+        mat-cell
+        *matCellDef="let element"
+        (click)="removeFavorite(element)"
+      >
+        <img src="../../assets/trash_icon.png" alt="trash" class="trash" />
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columndefs"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: columndefs"
+      class="mat-row-style"
+    ></tr>
+  </table>
+</div>

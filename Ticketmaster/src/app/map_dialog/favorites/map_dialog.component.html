@@ -1,0 +1,16 @@
+<div class="border-bottom">
+  <div class="m-3 mb-5">
+    <h2 class="font-weight-bold">Event Venue</h2>
+  </div>
+</div>
+
+<div class="m-3 mt-4">
+  <google-map [options]="data.mapOptions">
+    <map-marker [position]="data.marker.position"></map-marker>
+  </google-map>
+</div>
+<div class="m-3">
+  <button class="rounded text-dark bg-dark text-white" (click)="onClose()">
+    close
+  </button>
+</div>
