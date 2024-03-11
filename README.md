@@ -29,4 +29,9 @@ To get a local copy up and running, follow these simple steps.
    ```sh
    git clone https://github.com/your-username/EventFinder-angular.git
    ```
+2. Navigate to the folder:
+   ```
+   cd EventFinder-angular
+   ```
+   
 
